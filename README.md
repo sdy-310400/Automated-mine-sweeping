@@ -5,7 +5,8 @@
 一、arbiter官网下载Minesweeper Arbiter版本扫雷游戏，解压，找到其主程序ms_arbiter.exe的路径，填入game_path.py的arbiter_path（很重要，要填对）
 例如：![image](https://github.com/user-attachments/assets/47fde55c-32a3-4240-bea4-dcc39d9aea6e)
 
-二、
+二、三种运行方式
+
 1.运行UI.py有基础ui界面直接使用（行数和列数很重要，一定要填对）
 
 ![image](https://github.com/user-attachments/assets/4a5a0cb5-16f4-4396-9e3d-5a791de8ff9b)
