@@ -7,6 +7,7 @@
 
 二、
 1.运行UI.py有基础ui界面直接使用（行数和列数很重要，一定要填对）
+
 ![image](https://github.com/user-attachments/assets/4a5a0cb5-16f4-4396-9e3d-5a791de8ff9b)
 
 
