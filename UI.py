@@ -170,7 +170,10 @@ class GUI:
     def on_closing(self):
         self.manager.write(self.auto_restart_var.get(), self.width_entry.get(), self.height_entry.get())
         self.running = False
-        self._main.manual_end()
+        try:
+            self._main.manual_end()
+        except AttributeError:
+            pass
         self.root.destroy()
 
     def initialize_settings(self):
