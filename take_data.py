@@ -1,3 +1,6 @@
+"""作者：@sdy-310400
+本模块为程序核心模块1：获取屏幕上的数据的模块"""
+
 import subprocess
 from threading import Thread
 import win32gui
@@ -46,8 +49,9 @@ class CheckerBoard:
             subprocess.Popen(game_path.arbiter_path)
         while hwnd == 0:
             hwnd = win32gui.FindWindow("TMain", "Minesweeper Arbiter ")
-
+        #win32gui.SetWindowPos(hwnd, None, 101, 101, 0, 0, win32con.SWP_NOSIZE)
         self.left, self.top, self.right, self.bottom = win32gui.GetWindowRect(hwnd)
+        print(self.left, self.top, self.right, self.bottom)
         self.begin = (self.left + 47 - 12, self.top + 175 - 12)
         self.face = (47 - 12 + 100, 175 - 12 - 55)
         self.color_to_type = {
@@ -134,7 +138,7 @@ class CheckerBoard:
                     continue
         return _return
 
-    def get_type(self, _color, _row, _lin):
+    def get_type(self, _color, _row, _lin, _x, _y):
         if _color in self.color_to_type:
             return self.color_to_type[_color]
 
@@ -142,7 +146,8 @@ class CheckerBoard:
             return "2"
         self.running = False
         self.scanning_pic.running = False
-        print("========游戏失败========")
+        print("========游戏失败(color-%s;row-%d,lin-%d)========" % (str(_color), _row, _lin))
+        # pyautogui.moveTo(_x, _y)
         return False
 
     def scanning(self, _super):
@@ -159,7 +164,7 @@ class CheckerBoard:
                 test = pic.getpixel((x, y + 10))
                 name = "null" if test == (192, 192, 192) else "none"
             else:
-                name = self.get_type(color, row, lin)
+                name = self.get_type(color, row, lin, x, y)
                 if not isinstance(name, str):
                     _super.running = False
                     return False

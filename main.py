@@ -1,4 +1,5 @@
-
+"""作者：@sdy-310400
+本模块为程序核心模块2：逻辑判断与操作模块"""
 import keyboard
 import take_data
 import pyautogui
@@ -99,7 +100,8 @@ class Main:
         no_number_flag = 0
 
         while self.running:
-            self.CB.scanning(self)
+            if self.CB.scanning(self):
+                return False
             self.CB.print_board()
             have_chink = False
             have_none = None
@@ -165,7 +167,7 @@ def module_run(_wide, _high, _module):
             _main = Main(wide_count=_wide, high_count=_high)
             if _main.run():
                 break
-            if not _main.running:
+            if _main.exit:
                 break
 
 
