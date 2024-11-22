@@ -24,6 +24,18 @@
 1.在运行时要保证游戏窗口不被其他窗口阻挡
 
 2.在运行过程中会获取鼠标的操作权限，你仍可以使用鼠标，但是不建议，可能会点到其他地方。在运行过程中可以按下ctrl+e或者把鼠标移动到屏幕右上角以终止程序
+
+3.依赖的包：
+
+keyboard
+
+pyautogui
+
+subprocess
+
+pyautogui
+
+4.有任何问题联系QQ：3104007941
 <!---
 sdy-310400/sdy-310400 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
