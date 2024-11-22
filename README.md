@@ -33,8 +33,6 @@ pyautogui
 
 subprocess
 
-pyautogui
-
 4.有任何问题联系QQ：3104007941
 <!---
 sdy-310400/sdy-310400 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
